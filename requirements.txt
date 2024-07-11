@@ -1,6 +1,6 @@
-streamlit
+streamlit>=1.21.0
 textblob
-pillow
+Pillow
 text2emotion
 plotly
 numpy

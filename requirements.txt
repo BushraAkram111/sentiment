@@ -1,0 +1,11 @@
+streamlit
+textblob
+pillow
+text2emotion
+plotly
+numpy
+opencv-python-headless
+flair
+fer
+moviepy
+pandas

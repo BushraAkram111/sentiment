@@ -9,3 +9,4 @@ flair==0.10
 fer==22.0.2
 moviepy==1.0.3
 pandas==1.3.5
+streamlit

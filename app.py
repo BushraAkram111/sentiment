@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from textblob import TextBlob
 from PIL import Image
-import text2emotion as te
+import emotion  # Updated import
 import plotly.graph_objects as go
 import numpy as np
 import cv2
@@ -158,7 +158,7 @@ def render_text_analysis_page():
     st.text("""In the Text Analysis section, you can input text to analyze its sentiment using 
 two distinct methods. The first method, TextBlob, evaluates the sentiment polarity 
 of the text, categorizing it as Positive, Negative, or Neutral based on the overal
-sentiment score. On the other hand, the text2emotion method detects emotions 
+sentiment score. On the other hand, the emotion method detects emotions 
 expressed within the text, identifying the primary emotion as Happy, Sad, Angry, 
 Fearful, or Surprised. Through these analyses, the section provides insights into
 the emotional tone and sentiment conveyed by the input text, facilitating a deeper 
@@ -169,7 +169,7 @@ understanding of its underlying sentiments and emotions.""")
     st.text("")
     analysis_type = st.selectbox(
         'Type of analysis',
-        ('Positive/Negative/Neutral - TextBlob', 'Happy/Sad/Angry/Fear/Surprise - text2emotion'))
+        ('Positive/Negative/Neutral - TextBlob', 'Happy/Sad/Angry/Fear/Surprise - emotion'))
     st.text("")
     if st.button('Predict'):
         if user_text != "" and analysis_type is not None:
@@ -206,8 +206,8 @@ def get_sentiments(user_text, analysis_type):
         fig.update_layout(title='Text Sentiment Analysis', xaxis_title='Sentiment', yaxis_title='Frequency')
         st.plotly_chart(fig)
         
-    elif analysis_type == 'Happy/Sad/Angry/Fear/Surprise - text2emotion':
-        emotions = te.get_emotion(user_text)
+    elif analysis_type == 'Happy/Sad/Angry/Fear/Surprise - emotion':
+        emotions = emotion.analyze(user_text)
         emotion = max(emotions, key=emotions.get)
         st.write(f"Emotion: {emotion} {getEmoji[emotion]}")
         

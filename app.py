@@ -12,6 +12,11 @@ from fer import FER
 from moviepy.editor import VideoFileClip
 import pandas as pd
 
+import text2emotion as emotion  # Corrected import
+import plotly.graph_objects as go
+import numpy as np
+import cv2
+
 # Emoji dictionary
 getEmoji = {
     "happy": "😊",

@@ -18,4 +18,3 @@ numpy==1.23.5
 opencv-python-headless==4.7.0.72
 plotly==5.10.0
 moviepy==1.0.3
-fer==22.9.6

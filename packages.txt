@@ -1,5 +1,5 @@
+libfontconfig1
+libgtk2.0-dev
 libsm6
 libxrender1
-libfontconfig1
 libgl1-mesa-glx
-libgtk2.0-dev

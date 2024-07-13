@@ -11,4 +11,3 @@ moviepy==1.0.3
 pandas
 scipy==1.10.1
 gensim==4.3.1
-sentencepiece==0.1.96 --use-deprecated=legacy-resolver

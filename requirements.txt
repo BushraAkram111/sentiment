@@ -11,3 +11,11 @@ moviepy
 pandas
 scipy==1.10.1
 gensim==4.3.1
+scipy==1.10.1
+gensim==4.3.1
+flair==0.11.3
+numpy==1.23.5
+opencv-python-headless==4.7.0.72
+plotly==5.10.0
+moviepy==1.0.3
+fer==22.9.6

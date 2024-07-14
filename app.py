@@ -12,6 +12,26 @@ from moviepy.editor import VideoFileClip
 import pandas as pd
 import text2emotion as emotion
 cv2
+import streamlit as st
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+try:
+    import textblob
+    import pillow
+    import text2emotion
+    import plotly
+    import numpy
+    import cv2
+    import flair
+    import fer
+    import moviepy
+    import pandas
+except ImportError as e:
+    logger.error(f"ImportError: {e}")
+    st.error(f"An import error occurred: {e}")
 
 # Emoji dictionary
 getEmoji = {

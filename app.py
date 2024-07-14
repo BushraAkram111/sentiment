@@ -2,7 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 from textblob import TextBlob
 from PIL import Image
-#import emotion  # Updated import
 import plotly.graph_objects as go
 import numpy as np
 import cv2
@@ -11,11 +10,8 @@ from flair.data import Sentence
 from fer import FER
 from moviepy.editor import VideoFileClip
 import pandas as pd
-
-import text2emotion as emotion  # Corrected import
-import plotly.graph_objects as go
-import numpy as np
-import cv2
+import text2emotion as emotion
+cv2
 
 # Emoji dictionary
 getEmoji = {
